@@ -262,7 +262,7 @@ class TestANNTools(unittest.TestCase):
         # Iterates through the optimization loop
 
         tf_model, *_ = training_tools.ModelTraining(tf_model, 
-        self.training_inputTensor, self.training_trueTensor, loss_metric
+        self.training_data, self.training_trueTensor, loss_metric
         =self.loss_metric, optimizer=self.optimizer, n_iterations=
         self.n_iterations, gradient_tolerance=self.gradient_tolerance, 
         verbose_deltaIterations=self.verbose_deltaIterations, verbose=
@@ -275,7 +275,7 @@ class TestANNTools(unittest.TestCase):
         test_loss = self.loss_metric(self.test_trueTensor, y_test)
 
         print("Loss function on test set:", format(test_loss.numpy(), 
-        '.5e'))
+        '.4e'))
 
 # Runs all tests
 
