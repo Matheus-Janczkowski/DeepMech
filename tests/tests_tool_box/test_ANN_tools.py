@@ -6,8 +6,6 @@ import tensorflow as tf
 
 import numpy as np
 
-import time
-
 import DeepMech.source.tool_box.ANN_tools as ANN_tools
 
 import DeepMech.source.tool_box.training_tools as training_tools
@@ -275,7 +273,7 @@ class TestANNTools(unittest.TestCase):
         test_loss = self.loss_metric(self.test_trueTensor, y_test)
 
         print("Loss function on test set:", format(test_loss.numpy(), 
-        '.4e'))
+        '.5e'))
 
 # Runs all tests
 
