@@ -45,7 +45,7 @@ def grad(model, x, extra_arguments=None, axis=1):
     # Deletes the evaluation of the automatic differentiation to spare
     # memory
 
-    del tape 
+    del tape
 
     # Returns the gradient
 
@@ -57,3 +57,9 @@ def grad(model, x, extra_arguments=None, axis=1):
     else:
 
         return model_gradient
+    
+# Defines a function to evaluate the divergent of a field
+
+def div(model, x, extra_arguments=None, axis=1):
+
+    #
